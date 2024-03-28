@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'convertidor',
+    loadChildren: () => import('./convertidor/convertidor.module').then( m => m.ConvertidorPageModule)
+  },
+  {
+    path: 'calculadora',
+    loadChildren: () => import('./calculadora/calculadora.module').then( m => m.CalculadoraPageModule)
+  },
+  {
+    path: 'quizz',
+    loadChildren: () => import('./quizz/quizz.module').then( m => m.QuizzPageModule)
+  },
 ];
 
 @NgModule({

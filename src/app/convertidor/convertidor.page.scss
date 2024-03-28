@@ -1,0 +1,34 @@
+.content {
+    --background: #f2f2f2;
+  }
+ 
+  .converter-card {
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .card-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+ 
+  .label {
+    font-weight: bold;
+  }
+ 
+  .amount-input ion-input {
+    border-radius: 5px;
+  }
+ 
+  .convert-button {
+    margin-top: 1rem;
+  }
+ 
+  .result {
+    margin-top: 1rem;
+    text-align: center;
+  }
+ 

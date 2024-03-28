@@ -1,27 +1,46 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-header {
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ 
+/* Estilo para la barra de herramientas */
+ion-toolbar {
+  border-bottom: 4px solid #FF5722; /* Borde inferior */
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ 
+/* Estilo para el título */
+ion-title {
+  font-size: 28px; /* Tamaño de la fuente */
 }
-
-#container a {
-  text-decoration: none;
+ 
+/* Estilo para el contenido */
+ion-content {
+  background-color: #F9EBEA; /* Color de fondo */
+  padding: 20px; /* Espaciado interno */
+}
+ 
+/* Estilo para el contenedor de botones */
+.botones-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+/* Estilo para los botones */
+.boton {
+  margin-bottom: 20px; /* Espacio entre botones */
+  background-color: #2196F3; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: 2px solid #1565C0; /* Borde */
+  border-radius: 10px; /* Borde redondeado */
+  padding: 15px 30px; /* Espaciado interno */
+  font-size: 18px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cursor al pasar sobre el botón */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+ 
+/* Estilo al pasar el cursor sobre el botón */
+.boton:hover {
+  background-color: #1565C0; /* Nuevo color de fondo */
+  color: #FFEB3B; /* Nuevo color del texto */
 }

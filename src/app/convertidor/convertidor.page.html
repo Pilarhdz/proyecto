@@ -1,0 +1,50 @@
+[14:35] KEVIN JESUS NIETO PEREZ
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Convertidor de Monedas</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content [fullscreen]="true" class="content">
+  <ion-card class="converter-card">
+    <ion-card-header>
+      <ion-card-title class="card-title">Convertidor de Monedas</ion-card-title>
+    </ion-card-header>
+ 
+    <ion-card-content>
+      <ion-list lines="none">
+        <ion-item>
+          <ion-label class="label">Seleccione el tipo de moneda que ingresa:</ion-label>
+          <ion-select [(ngModel)]="tipoMoneda" interface="action-sheet">
+            <ion-select-option value="dolarP">Dólar</ion-select-option>
+            <ion-select-option value="euroP">Euro</ion-select-option>
+            <ion-select-option value="pesoP">Peso</ion-select-option>
+            <ion-select-option value="bolivarP">Bolívares</ion-select-option>
+            <ion-select-option value="rupiaP">Rupia</ion-select-option>
+          </ion-select>
+        </ion-item>
+ 
+        <ion-item>
+          <ion-label position="stacked" class="label">Inserte su cantidad de dinero:</ion-label>
+          <ion-input type="number" [(ngModel)]="cantidadDinero"></ion-input>
+        </ion-item>
+ 
+        <ion-item>
+          <ion-label class="label">Seleccione la moneda a la que desea convertir:</ion-label>
+          <ion-select [(ngModel)]="opcionSeleccionada" interface="action-sheet">
+            <ion-select-option value="euro">Euros</ion-select-option>
+            <ion-select-option value="dolar">Dólares</ion-select-option>
+            <ion-select-option value="rupia">Rupias</ion-select-option>
+            <ion-select-option value="bolivar">Bolívares</ion-select-option>
+            <ion-select-option value="peso">Pesos</ion-select-option>
+          </ion-select>
+        </ion-item>
+ 
+        <ion-button expand="block" color="success" class="convert-button" (click)="conversion()">Convertir</ion-button>
+ 
+        <p class="result" *ngIf="resultadoConversion !== null">El resultado de la conversión es: {{ resultadoConversion }}</p>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+ 

@@ -1,0 +1,21 @@
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+   
+  .question {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+   
+  .quiz-end {
+    text-align: center;
+  }
+   
+  #puntaje {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }

@@ -1,0 +1,49 @@
+[14:06] KEVIN JESUS NIETO PEREZ
+<ion-header [translucent]="true">
+
+  <ion-toolbar color="primary">
+
+    <ion-title>
+
+      Quiz de PHP
+
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+ 
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div class="quiz-container">
+
+    <div *ngIf="indicePreguntaActual < preguntas.length">
+
+      <h2 class="question">{{ preguntas[indicePreguntaActual].enunciado }}</h2>
+
+      <ion-list lines="full">
+
+        <ion-item *ngFor="let opcion of preguntas[indicePreguntaActual].opciones; let i = index" button (click)="responderPregunta(i)">
+
+          <ion-label>{{ opcion }}</ion-label>
+
+        </ion-item>
+
+      </ion-list>
+
+    </div>
+ 
+    <div *ngIf="indicePreguntaActual >= preguntas.length" class="quiz-end">
+
+      <h2>¡Fin del quiz!</h2>
+
+      <p id="puntaje">Tu puntaje: {{ puntaje }} / {{ preguntas.length }}</p>
+
+      <ion-button expand="block" color="secondary" (click)="reiniciarQuiz()">Reiniciar Quiz</ion-button>
+
+    </div>
+
+  </div>
+
+</ion-content>
+
